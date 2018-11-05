@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@FeignClient("StudentClient")
+@FeignClient(name="StudentClient", url="http://localhost:8083/students", configuration = ClientConfiguration.class)
 public interface IStudentClient {
 
     @RequestLine("GET /course/{id}")

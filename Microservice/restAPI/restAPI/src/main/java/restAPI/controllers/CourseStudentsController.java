@@ -5,7 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import restAPI.models.CourseStudents;
 import restAPI.services.CourseStudentService;
 
 @RestController
@@ -15,7 +14,7 @@ public class CourseStudentsController {
     CourseStudentService courseStudentService;
 
     @RequestMapping("/courseStudents/{id}")
-    ResponseEntity getOne(@PathVariable Long id) {
+    ResponseEntity<Object> getOne(@PathVariable Long id) {
 
         return courseStudentService.getOneCourseStudent(id);
     }

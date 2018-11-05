@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 
 @Component
-@FeignClient("CourseClient")
+@FeignClient(name = "CourseClient")
 public interface ICourseClient {
 
     @RequestLine("GET /{id}")
