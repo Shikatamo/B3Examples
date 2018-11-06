@@ -16,4 +16,9 @@ public class Course {
     public Course(String title) {
         this.title = title;
     }
+
+    public Course(Long id, String title) {
+        this.id = id;
+        this.title = title;
+    }
 }

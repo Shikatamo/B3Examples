@@ -31,11 +31,14 @@ ext {
 dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
+	testCompile 'org.mockito:mockito-core:1.9.5'
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+	testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+	testCompile("org.springframework.boot:spring-boot-starter-test")
 	compile group: 'io.github.openfeign', name: 'feign-gson', version: '9.3.1'
 	compile group: 'io.github.openfeign', name: 'feign-okhttp', version: '9.3.1'
 	compile group: 'io.github.openfeign', name: 'feign-slf4j', version: '9.3.1'
 	compileOnly('org.projectlombok:lombok')
-	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
 dependencyManagement {

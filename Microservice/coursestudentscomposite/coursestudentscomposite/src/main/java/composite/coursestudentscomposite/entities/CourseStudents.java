@@ -10,7 +10,6 @@ import java.util.List;
 @AllArgsConstructor
 public class CourseStudents {
 
-    @JsonValue
     private Long id;
     private String name;
     private List<Student> students;
